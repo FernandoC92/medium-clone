@@ -1,9 +1,30 @@
 {
-    "posts": [
-      { "id": 1, "img": "../../src/assets/gif.gif", "title": "How to Write a Funny Speech", "summary": "What I learned about humor after analyzing dozens of comedians, from Stephen Colbert to Ali Wong", "author": "Ana Karla", "category": "Social", "dataPost": "Nov 17", "timeRead": "8 min" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+  "posts": [
+    {
+      "id": 1,
+      "img": "../../src/assets/gif.gif",
+      "title": "How to Write a Funny Speech",
+      "content": "Story is here...",
+      "summary": "What I learned about humor after analyzing dozens of comedians, from Stephen Colbert to Ali Wong",
+      "author": "Ana Karla",
+      "category": "Social",
+      "dataPost": "Nov 17",
+      "timeRead": "8 min"
+    },
+    {
+      "title": "My title",
+      "history": "My history is here...",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

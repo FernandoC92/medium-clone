@@ -3,7 +3,7 @@
   <b-navbar toggleable="lg" type="light" class="shadow p-3 mb-5 bg-white rounded">
       <div class="container">
     <b-navbar-brand href="#" 
-    style="font-size: 2rem;">Medium</b-navbar-brand>
+    style="font-size: 2rem;" to="/">Medium</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -45,7 +45,11 @@
             </div>
             </b-dropdown-item>
             <div class="py-2">
-              <b-dropdown-item href="#"><span class="text-muted">New Story</span></b-dropdown-item>
+              <b-dropdown-item href="#">
+                <router-link to="/new-story">
+                  <span class="text-muted">New Story</span>    
+                </router-link>
+                </b-dropdown-item>
           <b-dropdown-item href="#"><span class="text-muted">Stories</span></b-dropdown-item>
             </div>
         </b-nav-item-dropdown>
@@ -71,7 +75,8 @@ export default {
 </script>
 
 <style>
-/* Verificar solução melhor para a retirada do dropdown-toggle */
+/* Verificar melhor solução para a retirada do dropdown-toggle */
+
 .dropdown-toggle::after {
   display: none !important;
 }

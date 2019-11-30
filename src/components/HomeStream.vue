@@ -1,12 +1,12 @@
-/-0,
-4<template>
+<template>
+<div>
+    <NavBar />
 <div class="container-fluid w-100 w-md-75">
 <div class="row">
     <div class="col-12">
         <div class="row p-0">
             <div class="col-sm-12 col-md-6 col-lg-4 p-0">
-                <div class="img-title"
-                ></div>
+                <div class="img-title"></div>
                 <div class="ml-3 ml-md-5 text-left">
                     <h5 class="font-weight-bold">{{ posts[0].title }}</h5>
                     <small class="text-muted">{{ posts[0].summary }}</small>
@@ -79,16 +79,21 @@
         </div>
     </div>
 </div>
+</div>
 </div>    
 </template>
 
 <script>
 import Axios from 'axios';
+import NavBar from './NavBar';
 
 export default {
+    components: {
+        NavBar
+    },
     data() {
         return {
-           posts: []
+           posts: [],
         }
     },
     methods: {
@@ -107,7 +112,7 @@ export default {
 
 <style>
 .img-title {
-    background-image: url(../../src/assets/gif.gif);
+    /* background-image: url(../../src/assets/gif.gif); */
     height: 150px;
     width: 100%;
     background-position: 51% 34%;

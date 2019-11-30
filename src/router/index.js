@@ -7,9 +7,14 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home
   },
+  {
+    path: '/new-story',
+    name: 'new-story',
+    component: () => import('../components/Draft.vue')
+  }
   // {
   //   // path: '/about',
   //   // name: 'about',
