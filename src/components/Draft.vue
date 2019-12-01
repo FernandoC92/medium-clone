@@ -10,28 +10,26 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
-      <!-- <b-navbar-nav>
-        <b-nav-item href="#">Link</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
-      </b-navbar-nav> -->
-
-      <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto">
-        <b-nav-form>
-            <b-button class="mr-3" v-b-modal.modal-1 size="sm"
+      <b-navbar-nav>
+        <b-button class="mr-3 mt-3 mt-md-0" v-b-modal.modal-1 size="sm"
             style="color: #58b59c; border: 1.2px solid; background-color: #FFF; border-color: #81ceba; font-size: .8rem;
             padding: .2rem .5rem 0 .5rem;
             "
             >Ready to publish?</b-button>
-          <b-button
+      </b-navbar-nav>
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+        <b-nav-form>
+          <!-- <b-button
           style="background: #fff; border: none;" size="sm" class="my-2 my-sm-0 mr-1" type="submit">
               <img src="../../src/assets/notification.png" width="16" height="16" alt="">
-          </b-button>
+          </b-button> -->
         </b-nav-form>
         <b-nav-item-dropdown center>
           <!-- Using 'button-content' slot -->
           <template v-slot:button-content>
-           <img class="rounded-circle" width="32" height="32" src="../../src/assets/profile.png" alt="">
+           <img class="rounded-circle mt-2 mt-md-0" width="32" height="32" src="../../src/assets/profile.png" alt="">
           </template>
           <b-dropdown-item href="#" class="border-bottom py-3">
             <div class="d-flex">
@@ -77,12 +75,11 @@
     ></b-form-textarea>
     </b-form>
     <div>
-  <b-modal id="modal-1" size="xl" style="opacity: 1;">
+  <b-modal hide-footer id="modal-1" size="xl" style="opacity: 1;">
     <form action="">
     <div class="container">
-      <div class="col-12">
         <div class="row">
-        <div class="col-12 col-md-6 mt-0">
+        <div class="col-12 col-md-6 mt-0 p-0">
           <h6>Story Preview</h6>
           <!-- <img class="mt-2" src="../../src/assets/gif.gif" width="440" height="200" alt=""> -->
           <div class="image-draft d-flex align-items-center justify-content-center">
@@ -90,24 +87,23 @@
             Include a high-quality image in your story to make it more inviting to readers.
             </span>
           </div>
-          <b-form-group class="col-10 mt-3 p-0" label-for="input-sm">
+          <b-form-group class="col-12 col-md-10 mt-3 p-0" label-for="input-sm">
     <b-form-input v-model="title" class="input-style font-weight-bold" id="input-sm" size="sm"></b-form-input>
   </b-form-group>
-   <b-form-group class="col-10 p-0" label-for="input-sm">
+   <b-form-group class="col-12 col-md-10 p-0" label-for="input-sm">
     <b-form-input v-model="text" class="input-style" id="input-sm" size="sm"></b-form-input>
   </b-form-group>
 
         </div>
-        <div class="col-12 col-md-6 mt-5 mt-md-0">
-          <div class="p-0 form-group col-12 col-md-10">
+        <div class="col-12 col-md-6 mt-5 mt-md-0 p-0">
+          <div class="p-0 form-group col-12 col-md-8">
             <small id="helpId" class="text-muted">Add or change tags (up to 5) so readers know what your story is about</small>
             <!-- <label for=""></label> -->
             <input type="text" name="" id="" class="form-control rounded-0 mt-2" placeholder="add a tag..." aria-describedby="helpId">
           </div>
-          <button type="submit" v-on:click="submitHistory" class="btn btn-success">Publish now</button>
+          <button type="submit" v-on:click="submitHistory" class="btn btn-success btn-submit">Publish now</button>
         </div>
         </div>
-      </div>
     </div>
     </form>
   </b-modal>
@@ -173,6 +169,12 @@ border-bottom: 2px solid;
 .input-style:focus {
   border: 0 0 0 1px solid;
   border-radius: 0;
+}
+
+@media(max-width: 520px) {
+  .btn-submit {
+  width: 100%;
+}
 }
 
 </style>
